@@ -16,14 +16,6 @@ public class Employee {
         this.salary = salary;
     }
 
-    public String toString() {
-        return this.getId() + ", " + this.getName() + ", " + String.format("%.2f", this.getSalary());
-    }
-
-    public void increaseSalary(double percentage) {
-        this.salary += this.salary * (percentage / 100.00);
-    }
-
     public Integer getId() {
         return id;
     }
@@ -47,4 +39,13 @@ public class Employee {
     public void setSalary(Double salary) {
         this.salary = salary;
     }
+
+    public void increaseSalary(double percentage) {
+        this.salary += this.salary * (percentage / 100.00);
+    }
+
+    public String toString() {
+        return this.getId() + ", " + this.getName() + ", " + String.format("%.2f", this.getSalary());
+    }
+
 }
